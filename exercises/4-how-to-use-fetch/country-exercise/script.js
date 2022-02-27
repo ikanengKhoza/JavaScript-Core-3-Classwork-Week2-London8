@@ -1,5 +1,25 @@
 // This function should retrieve the JSON from the `countryURL` and then call onCountryDataReceived() with the JSON
-function getData(countryURL) {}
+function getData(countryURL) {
+  fetch(countryURL)
+      .then(res => res.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+}
+
+
+
+
+
+
+
+
+// fetch(_____)
+//       .then(_______)
+//       .then((body) => console.log(body))
+//       .catch((error) => console.log(error));
+
+
+
 
 function onCountryDataReceived(country) {
   addCountryName(country);
